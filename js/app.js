@@ -26,7 +26,7 @@ function init() {
   console.log("function is called");
 
   board = ["", "", "", "", "", "", "", "", ""];
-  turn = "X";
+  turn = "🍉";
   winner = false;
   tie = false;
 
@@ -46,7 +46,7 @@ function updateBoard() {
 
 function updateMessage() {
   if (winner === false && tie === false) {
-    messageEl.textContent = `It is ${turn}'s turn.`;
+    messageEl.textContent = `It is ${turn}'s turn`;
   } else if (winner === false && tie === true) {
     messageEl.textContent = `It's a tie!`;
   } else {
@@ -96,7 +96,7 @@ function switchPlayerTurn() {
   if (winner) {
     return;
   }
-  turn = turn === "X" ? "O" : "X";
+  turn = turn === "🍉" ? "🫐" : "🍉";
 
   console.log("Turn: ", turn);
 }
